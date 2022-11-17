@@ -24,7 +24,7 @@ namespace CadToBim.Views
         {
             var resourceDict = new ResourceDictionary
             {
-                Source = new Uri("D:/Codes/Walls/Walls/Views/BaseWindowStyle.xaml", UriKind.Absolute)
+                Source = new Uri("D:/Codes/Walls/CadToBim/Views/BaseWindowStyle.xaml", UriKind.Absolute)
             };
             ControlTemplate baseTemplate = resourceDict["BaseWindowControlTemplate"] as ControlTemplate;
 
@@ -58,7 +58,7 @@ namespace CadToBim.Views
         {
             var resourceDict = new ResourceDictionary
             {
-                Source = new Uri("D:/Codes/Walls/Walls/Views/BaseWindowStyle.xaml", UriKind.Absolute)
+                Source = new Uri("D:/Codes/Walls/CadToBim/Views/BaseWindowStyle.xaml", UriKind.Absolute)
             };
             this.Style = resourceDict["BaseWindowStyle"] as Style;
         }

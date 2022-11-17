@@ -26,21 +26,21 @@ namespace CadToBim
             PushButtonData column = new PushButtonData("Button 1", "Column", path, "CadToBim.CmdCreateColumn");
             //PushButton column = panel.AddItem(button1) as PushButton;
             column.ToolTip = "Create Columns. Link DWG with COLUMN layer";
-            Uri imagpath = new Uri(@"D:\Codes\Walls\Walls\Recources\Images\Column.ico");
+            Uri imagpath = new Uri(@"D:\Codes\Walls\CadToBim\Recources\Images\Column.ico");
             column.Image = new BitmapImage(imagpath);
 
             //Wall button
             PushButtonData wall = new PushButtonData("Button 2", "Wall", path, "CadToBim.CmdCreateWall");
             //PushButton wall = panel.AddItem(button2) as PushButton;
             wall.ToolTip = "Create Walls. Link DWG with WALL layer";
-            Uri imgpath = new Uri(@"D:\Codes\Walls\Walls\Recources\Images\Wall.ico");
+            Uri imgpath = new Uri(@"D:\Codes\Walls\CadToBim\Recources\Images\Wall.ico");
             wall.Image = new BitmapImage(imgpath);
 
             //Opening button
             PushButtonData opening = new PushButtonData("Button 3", "Opening", path, "CadToBim.CmdCreateOpening");
             //PushButton opening = panel.AddItem(button3) as PushButton;
             opening.ToolTip = "Insert Openings. Need layer DOOR, WINDOW & WALL";
-            Uri imgpth = new Uri(@"D:\Codes\Walls\Walls\Recources\Images\Opening.ico");
+            Uri imgpth = new Uri(@"D:\Codes\Walls\CadToBim\Recources\Images\Opening.ico");
             opening.Image = new BitmapImage(imgpth);
 
             //2nd panel
@@ -49,7 +49,7 @@ namespace CadToBim
             PushButtonData sttng = new PushButtonData("Button", "Settings", path, "CadToBim.Views.CmdConfig");
             PushButton setting = panel.AddItem(sttng) as PushButton;
             setting.ToolTip = "Default and preference settings.";
-            Uri imagepth = new Uri(@"D:\Codes\Walls\Walls\Recources\Images\Settings-icon.png");
+            Uri imagepth = new Uri(@"D:\Codes\Walls\CadToBim\Recources\Images\Settings-icon.png");
             setting.LargeImage = new BitmapImage(imagepth);
 
            
@@ -67,12 +67,12 @@ namespace CadToBim
 
             PushButton pushButton8 = ribbonpanel2.AddItem(button8) as PushButton;
 
-            button3.Image = new BitmapImage(new Uri(@"D:\Codes\Walls\Walls\Recources\Images\Column-icon.png"));
-            button4.Image = new BitmapImage(new Uri(@"D:\Codes\Walls\Walls\Recources\Images\wall-brick-icon.png"));
-            button5.Image = new BitmapImage(new Uri(@"D:\Codes\Walls\Walls\Recources\Images\door-open-icon.png"));
-            button6.Image = new BitmapImage(new Uri(@"D:\Codes\Walls\Walls\Recources\Images\Window-icon.png"));
+            button3.Image = new BitmapImage(new Uri(@"D:\Codes\Walls\CadToBim\Recources\Images\Column-icon.png"));
+            button4.Image = new BitmapImage(new Uri(@"D:\Codes\Walls\CadToBim\Recources\Images\wall-brick-icon.png"));
+            button5.Image = new BitmapImage(new Uri(@"D:\Codes\Walls\CadToBim\Recources\Images\door-open-icon.png"));
+            button6.Image = new BitmapImage(new Uri(@"D:\Codes\Walls\CadToBim\Recources\Images\Window-icon.png"));
 
-            pushButton8.LargeImage = new BitmapImage(new Uri(@"D:\Codes\Walls\Walls\Recources\Images\excel-icon.png"));
+            pushButton8.LargeImage = new BitmapImage(new Uri(@"D:\Codes\Walls\CadToBim\Recources\Images\excel-icon.png"));
 
             button3.ToolTip = "Create Column Scheduling";
             button4.ToolTip = "Create Wall Scheduling";
