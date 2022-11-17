@@ -1,0 +1,169 @@
+﻿<src:BaseWindow x:Class="CadToBim.Views.Configuration"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:src="clr-namespace:CadToBim.Views"
+             xmlns:p="clr-namespace:CadToBim.Properties"
+             mc:Ignorable="d"
+             WindowStartupLocation="Manual"
+             Background="White"
+             Height="446" Width="401"
+             SizeToContent="Height"
+             WindowStyle="None" AllowsTransparency="True">
+
+    <Window.Resources>
+        <ResourceDictionary>
+
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Border Background="LightGray" Padding="8" Height="448" VerticalAlignment="Top">
+        <StackPanel Height="441" VerticalAlignment="Top">
+            <GroupBox Header="Load Family" Padding="3 0 3 3" Background="White">
+                <GroupBox.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" FontSize="12" FontWeight="SemiBold"  >
+                            <TextBlock.Foreground>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black"/>
+                                    <GradientStop Color="#FF23BFFF" Offset="1"/>
+                                </LinearGradientBrush>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                    </DataTemplate>
+                </GroupBox.HeaderTemplate>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="85*"/>
+                        <ColumnDefinition Width="218*"/>
+                        <ColumnDefinition Width="64*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" Margin="0,0,5,0">
+                        <TextBlock Text="Rect-col *.rfa" Margin="0 7 0 7"/>
+                        <TextBlock Text="Round-col *.rfa" Margin="0 7 0 7"/>
+                        <TextBlock Text="Door *.rfa" Margin="0 7 0 7"/>
+                        <TextBlock Text="Window *.rfa" Margin="0 7 0 7"/>
+
+
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Margin="5,0,5,0">
+                        <TextBox Name="url_columnRect" Padding="3" Text="{Binding Source={x:Static p:Settings.Default}, 
+                         Path=url_columnRect, Mode=TwoWay}" Margin="0 3 0 3"/>
+                        <TextBox Name="url_columnRound" Padding="3" Text="{Binding Source={x:Static p:Settings.Default}, 
+                         Path=url_columnRound, Mode=TwoWay}" Margin="0 3 0 3"/>
+                        <TextBox Name="url_door" Padding="3" Text="{Binding Source={x:Static p:Settings.Default}, 
+                         Path=url_door, Mode=TwoWay}" Margin="0 3 0 3"/>
+                        <TextBox Name="url_window" Padding="3" Text="{Binding Source={x:Static p:Settings.Default}, 
+                         Path=url_window, Mode=TwoWay}" Margin="0 3 0 3"/>
+
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2" Margin="5,0,0,0">
+                        <Button x:Name="browseColRect" Padding="3" Content="Browse.."  Margin="0 3 0 3" Click="BtnBrowseColRect"/>
+                        <Button x:Name="browseColRound" Padding="3" Content="Browse.."  Margin="0 3 0 3" Click="BtnBrowseColRound"/>
+                        <Button x:Name="browseDoor" Padding="3" Content="Browse.."  Margin="0 3 0 3" Click="BtnBrowseDoor"/>
+                        <Button x:Name="browseWin" Padding="3" Content="Browse.."  Margin="0 3 0 3" Click="BtnBrowseWin"/>
+                    </StackPanel>
+                </Grid>
+
+            </GroupBox>
+
+            <GroupBox Header="Select Layer" Margin="0 10 0 0" Padding="3" Height="148" Background="White">
+                <GroupBox.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" FontSize="12" FontWeight="SemiBold" >
+                            <TextBlock.Foreground>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black"/>
+                                    <GradientStop Color="#FF23BFFF" Offset="1"/>
+                                </LinearGradientBrush>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                    </DataTemplate>
+                </GroupBox.HeaderTemplate>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="85*"/>
+                        <ColumnDefinition Width="218*"/>
+                        <ColumnDefinition Width="64*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" Margin="0,0,5,0">
+                        <TextBlock Text="Wall layer" Margin="0 7 0 7"/>
+                        <TextBlock Text="Column layer" Margin="0 7 0 7"/>
+                        <TextBlock Text="Window layer" Margin="0 7 0 7"/>
+                        <TextBlock Text="Door layer" Margin="0 7 0 7"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Margin="5,0,5,0">
+                        <TextBox Name="layerWall" Padding="3" Text="{Binding Source={x:Static p:Settings.Default}, 
+                         Path=layerWall, Mode=TwoWay}" Margin="0 3 0 3"/>
+                        <TextBox Name="layerColumn" Padding="3" Text="{Binding Source={x:Static p:Settings.Default}, 
+                         Path=layerColumn, Mode=TwoWay}" Margin="0 3 0 3"/>
+                        <TextBox Name="layerWindow" Padding="3" Text="{Binding Source={x:Static p:Settings.Default}, 
+                         Path=layerWindow, Mode=TwoWay}" Margin="0 3 0 3"/>
+                        <TextBox Name="layerDoor" Padding="3" Text="{Binding Source={x:Static p:Settings.Default}, 
+                         Path=layerDoor, Mode=TwoWay}" Margin="0 3 0 3"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2" Margin="5,0,0,0">
+                        <Button x:Name="pickWall" Padding="3" Content="Pick +"  Margin="0 3 0 3" Click="BtnPickWall"/>
+                        <Button x:Name="pickColumn" Padding="3" Content="Pick +"  Margin="0 3 0 3" Click="BtnPickColumn"/>
+                        <Button x:Name="pickWindow" Padding="3" Content="Pick +"  Margin="0 3 0 3" Click="BtnPickWindow"/>
+                        <Button x:Name="pickDoor" Padding="3" Content="Pick +"  Margin="0 3 0 3" Click="BtnPickDoor"/>
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+
+            <GroupBox Header="Modeling parameters (mm)" Margin="0 10 0 0" Padding="3" Background="White" >
+                <GroupBox.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" FontSize="12" FontWeight="SemiBold" >
+                            <TextBlock.Foreground>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black"/>
+                                    <GradientStop Color="#FF23BFFF" Offset="1"/>
+                                </LinearGradientBrush>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                    </DataTemplate>
+                </GroupBox.HeaderTemplate>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="85*"/>
+                        <ColumnDefinition Width="218*"/>
+                        <ColumnDefinition Width="64*"/>
+                    </Grid.ColumnDefinitions>
+
+                    
+
+                    <StackPanel Grid.Column="0" Margin="0 0 5 0">
+                        <TextBlock Text="Sill height" Margin="0 5 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Margin="5,0,0,0" HorizontalAlignment="Left">
+                        <TextBox x:Name="sillHeight" Padding="2" Text="{Binding sillHeight, Mode=TwoWay, Source={x:Static p:Settings.Default}}" Width="61" RenderTransformOrigin="0.536,0.694"/>
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+
+
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--<Button Content="Apply" Grid.Column="0" Margin="0 0 5 0" Command="ApplicationCommands.Close"/>-->
+                <Button Content="Apply" Grid.Column="0"  Click="apply_Click" RenderTransformOrigin="0.495,1.928" BorderBrush="White" BorderThickness="3" FontSize="13" Margin="10,22,0,21" Background="#FFBAB9B9"/>
+                <Button Content="Reset to Default"  Click="reset_Click" BorderBrush="White" BorderThickness="3" FontSize="13" Margin="10,22,10,21" Grid.Column="1" Background="#FFBAB9B9"/>
+
+            </Grid>
+
+        </StackPanel>
+    </Border>
+</src:BaseWindow>

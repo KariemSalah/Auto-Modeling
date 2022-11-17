@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>ITI_Project</Name>
+		<Assembly>CadToBim.dll</Assembly>
+		<AddInId>
+			36AF918D-2F0A-4613-88DC-00E528195617
+		</AddInId>
+		<FullClassName>CadToBim.ExternalApp</FullClassName>
+		<VendorId>ITI</VendorId>
+		<VendorDescription>@ITI</VendorDescription>
+	</AddIn>
+</RevitAddIns>
